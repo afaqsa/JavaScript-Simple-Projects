@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="container">
+        <div class="screen"><input type="text" id="display" placeholder="0"></div>
+        <div class="btns">
+            <button value="sin" class="button black" onclick = "sin()">sin</button>
+            <button value="cos" class="button black" onclick = "cos()">cos</button>
+            <button value="tan" class="button black" onclick = "tan()">tan</button>
+            <button value="Math.PI"   class="button black" onclick = "calculate(value)">π</button>
+            <button  class="button black" onclick = "CLR()">CLR</button>
+            <br><br>
+            <button value="&radic;" class="button black" onclick = "sqrt()">&radic;</button>
+            <button value="^3"      class="button black" onclick = "cube()">^3</button>
+            <button value="^2"      class="button black" onclick = "square()">^2</button>
+            <button                 class="button black" onclick = "LOG()">LOG</button>
+            <button value="%"       class="button black" onclick = "calculate(value)">%</button>
+            <br><br>
+            <button value="RCL" class="button black">RCL</button>
+            <button value="("   class="button black" onclick="calculate(value)">(</button>
+            <button value=")"   class="button black" onclick="calculate(value)">)</button>
+            <button value="M+"  class="button black">M+</button>
+            <button value="Mod" class="button black">Mod</button>
+            <br><br>
+            <button value="7"   class="button silver" onclick="calculate(value)">7</button>
+            <button value="8"   class="button silver" onclick="calculate(value)">8</button>
+            <button value="9"   class="button silver" onclick="calculate(value)">9</button>
+            <button value="DEL" class="button red"    onclick="DEL()">DEL</button>
+            <button value="AC"  class="button red"    onclick = "CLR()">AC</button>
+            <br><br>
+            <button value="4" class="button silver" onclick="calculate(value)">4</button>
+            <button value="5" class="button silver" onclick="calculate(value)">5</button>
+            <button value="6" class="button silver" onclick="calculate(value)">6</button>
+            <button value="*" class="button silver" onclick="calculate(value)">*</button>
+            <button value="/" class="button silver" onclick="calculate(value)">/</button>
+            <br><br>
+            <button value="1" class="button silver" onclick="calculate(value)">1</button>
+            <button value="2" class="button silver" onclick="calculate(value)">2</button>
+            <button value="3" class="button silver" onclick="calculate(value)">3</button>
+            <button value="+" class="button silver" onclick="calculate(value)">+</button>
+            <button value="-" class="button silver" onclick="calculate(value)">-</button>
+            <br><br>
+            <button value="0"  class="button silver" onclick="calculate(value)"> 0 </button>
+            <button value="."  class="button silver" onclick="calculate(value)"> . </button>
+            <button value="^"  class="button silver" onclick="calculate(value)"> ^ </button>
+            <button            class="button silver"                           >Ans</button>
+            <button value="="  class="button silver" onclick="equal()">=</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="workingfile.js">
+    </script>
+</body>
+</html>
