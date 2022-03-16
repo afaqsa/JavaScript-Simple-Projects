@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+
+}
+body{
+    overflow: hidden;
+}
+.outerDiv{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2a364f;
+    display: grid;
+    place-items: center;
+}
+.innerDiv{
+    width: 80vw;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.main-heading{
+    padding: 30px;
+    color: #fff;
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.5);
+    font-size: 130px;
+}

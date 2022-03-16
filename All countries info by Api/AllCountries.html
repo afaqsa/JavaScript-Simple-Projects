@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Allconrty.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="heading">
+        <h1>All Countries Information</h1>
+        <p class="card-body-text">Home</p>
+    </div>
+    <div id="page">
+        
+    </div>
+    <div id="contry">
+
+    </div>
+</body>
+    <script>
+        
+        const request = new XMLHttpRequest();
+        request.open('Get',"https://restcountries.com/v2/all");
+        request.send();
+       // const [data] = 0;
+      // var value;
+ const page = document.getElementById('page');
+const contry = document.getElementById('contry');
+        var items=0;
+        var itemsList =[];
+        request.addEventListener('load',function(){
+            let [data] = [JSON.parse(this.responseText)];
+           
+            // console.log(data);
+            //value = data;
+            const pageData= `
+            <div class="contries">
+                <ol id='list'>
+                        <li>${data[0].name}</li>
+                        <li>${data[1].name}</li>
+                        <li>${data[2].name}</li>
+                        <li>${data[3].name}</li>
+                        <li>${data[4].name}</li>
+                        <li>${data[5].name}</li>
+                        <li>${data[6].name}</li>
+                        <li>${data[7].name}</li>
+                        <li>${data[8].name}</li>
+                        <li>${data[9].name}</li>
+                        <li>${data[10].name}</li>
+                        <li>${data[11].name}</li>
+                        <li>${data[12].name}</li>
+                        <li>${data[13].name}</li>
+                        <li>${data[14].name}</li>
+                        <li>${data[15].name}</li>
+                        <li>${data[16].name}</li>
+                        <li>${data[17].name}</li>
+                        <li>${data[18].name}</li>
+                        <li>${data[19].name}</li>
+                        <li>${data[20].name}</li>
+                        <li>${data[21].name}</li>
+                        <li>${data[22].name}</li>
+                        <li>${data[23].name}</li>
+                        <li>${data[24].name}</li>
+                        <li>${data[25].name}</li>
+                        <li>${data[26].name}</li>
+                        <li>${data[27].name}</li>
+                        <li>${data[28].name}</li>
+                        <li>${data[29].name}</li>
+                        <li>${data[30].name}</li>
+                        <li>${data[31].name}</li>
+                        <li>${data[32].name}</li>
+                        <li>${data[33].name}</li>
+                        <li>${data[34].name}</li>
+                        <li>${data[35].name}</li>
+                        <li>${data[36].name}</li>
+                        <li>${data[37].name}</li>
+                        <li>${data[38].name}</li>
+                        <li>${data[39].name}</li>
+                        <li>${data[40].name}</li>
+                        <li>${data[41].name}</li>
+                        <li>${data[42].name}</li>
+                        <li>${data[43].name}</li>
+                        <li>${data[44].name}</li>
+                        <li>${data[45].name}</li>
+                        <li>${data[46].name}</li>
+                        <li>${data[47].name}</li>
+                        <li>${data[48].name}</li>
+                        <li>${data[49].name}</li>           
+                        <li>${data[50].name}</li>
+                        <li>${data[51].name}</li>
+                        <li>${data[52].name}</li>
+                        <li>${data[53].name}</li>
+                        <li>${data[54].name}</li>
+                        <li>${data[55].name}</li>
+                        <li>${data[56].name}</li>
+                        <li>${data[57].name}</li>
+                        <li>${data[58].name}</li>
+                        <li>${data[59].name}</li>
+                        <li>${data[60].name}</li>
+                        <li>${data[61].name}</li>
+                        <li>${data[62].name}</li>
+                        <li>${data[63].name}</li>
+                        <li>${data[64].name}</li>
+                        <li>${data[65].name}</li>
+                        <li>${data[66].name}</li>
+                        <li>${data[67].name}</li>
+                        <li>${data[68].name}</li>
+                        <li>${data[69].name}</li> 
+                        <li>${data[70].name}</li>
+                        <li>${data[71].name}</li>
+                        <li>${data[72].name}</li>
+                        <li>${data[73].name}</li>
+                        <li>${data[74].name}</li>
+                        <li>${data[75].name}</li>
+                        <li>${data[76].name}</li>
+                        <li>${data[77].name}</li>
+                        <li>${data[78].name}</li>
+                        <li>${data[79].name}</li> 
+                        <li>${data[80].name}</li>
+                        <li>${data[81].name}</li>
+                        <li>${data[82].name}</li>
+                        <li>${data[83].name}</li>
+                        <li>${data[84].name}</li>
+                        <li>${data[85].name}</li>
+                        <li>${data[86].name}</li>
+                        <li>${data[87].name}</li>
+                        <li>${data[88].name}</li>
+                        <li>${data[89].name}</li> 
+                        <li>${data[90].name}</li>
+                        <li>${data[91].name}</li>
+                        <li>${data[92].name}</li>
+                        <li>${data[93].name}</li>
+                        <li>${data[94].name}</li>
+                        <li>${data[95].name}</li>
+                        <li>${data[96].name}</li>
+                        <li>${data[97].name}</li>
+                        <li>${data[98].name}</li>
+                        <li>${data[99].name}</li>         
+                        <li>${data[100].name}</li>
+                        <li>${data[101].name}</li>
+                        <li>${data[102].name}</li>
+                        <li>${data[103].name}</li>
+                        <li>${data[104].name}</li>
+                        <li>${data[105].name}</li>
+                        <li>${data[106].name}</li>
+                        <li>${data[107].name}</li>
+                        <li>${data[108].name}</li>
+                        <li>${data[109].name}</li>
+                        <li>${data[110].name}</li>
+                        <li>${data[111].name}</li>
+                        <li>${data[112].name}</li>
+                        <li>${data[113].name}</li>
+                        <li>${data[114].name}</li>
+                        <li>${data[115].name}</li>
+                        <li>${data[116].name}</li>
+                        <li>${data[117].name}</li>
+                        <li>${data[118].name}</li>
+                        <li>${data[119].name}</li>
+                        <li>${data[120].name}</li>
+                        <li>${data[121].name}</li>
+                        <li>${data[122].name}</li>
+                        <li>${data[123].name}</li>
+                        <li>${data[124].name}</li>
+                        <li>${data[125].name}</li>
+                        <li>${data[126].name}</li>
+                        <li>${data[127].name}</li>
+                        <li>${data[128].name}</li>
+                        <li>${data[129].name}</li>
+                        <li>${data[130].name}</li>
+                        <li>${data[131].name}</li>
+                        <li>${data[132].name}</li>
+                        <li>${data[133].name}</li>
+                        <li>${data[134].name}</li>
+                        <li>${data[135].name}</li>
+                        <li>${data[136].name}</li>
+                        <li>${data[137].name}</li>
+                        <li>${data[138].name}</li>
+                        <li>${data[139].name}</li>
+                        <li>${data[140].name}</li>
+                        <li>${data[141].name}</li>
+                        <li>${data[142].name}</li>
+                        <li>${data[143].name}</li>
+                        <li>${data[144].name}</li>
+                        <li>${data[145].name}</li>
+                        <li>${data[146].name}</li>
+                        <li>${data[147].name}</li>
+                        <li>${data[148].name}</li>
+                        <li>${data[149].name}</li>
+                        <li>${data[150].name}</li>
+                        <li>${data[151].name}</li>
+                        <li>${data[152].name}</li>
+                        <li>${data[153].name}</li>
+                        <li>${data[154].name}</li>
+                        <li>${data[155].name}</li>
+                        <li>${data[156].name}</li>
+                        <li>${data[157].name}</li>
+                        <li>${data[158].name}</li>
+                        <li>${data[159].name}</li>
+                        <li>${data[160].name}</li>
+                        <li>${data[161].name}</li>
+                        <li>${data[162].name}</li>
+                        <li>${data[163].name}</li>
+                        <li>${data[164].name}</li>
+                        <li>${data[165].name}</li>
+                        <li>${data[166].name}</li>
+                        <li>${data[167].name}</li>
+                        <li>${data[168].name}</li>
+                        <li>${data[169].name}</li>
+                        <li>${data[170].name}</li>
+                        <li>${data[171].name}</li>
+                        <li>${data[172].name}</li>
+                        <li>${data[173].name}</li>
+                        <li>${data[174].name}</li>
+                        <li>${data[175].name}</li>
+                        <li>${data[176].name}</li>
+                        <li>${data[177].name}</li>
+                        <li>${data[178].name}</li>
+                        <li>${data[179].name}</li>
+                        <li>${data[180].name}</li>
+                        <li>${data[181].name}</li>
+                        <li>${data[182].name}</li>
+                        <li>${data[183].name}</li>
+                        <li>${data[184].name}</li>
+                        <li>${data[185].name}</li>
+                        <li>${data[186].name}</li>
+                        <li>${data[187].name}</li>
+                        <li>${data[188].name}</li>
+                        <li>${data[189].name}</li>
+                        <li>${data[190].name}</li>
+                        <li>${data[191].name}</li>
+                        <li>${data[192].name}</li>
+                        <li>${data[193].name}</li>
+                        <li>${data[194].name}</li>
+                        <li>${data[195].name}</li>
+                        <li>${data[196].name}</li>
+                        <li>${data[197].name}</li>
+                        <li>${data[198].name}</li>
+                        <li>${data[199].name}</li>
+
+                        <li>${data[200].name}</li>
+                        <li>${data[201].name}</li>
+                        <li>${data[202].name}</li>
+                        <li>${data[203].name}</li>
+                        <li>${data[204].name}</li>
+                        <li>${data[205].name}</li>
+                        <li>${data[206].name}</li>
+                        <li>${data[207].name}</li>
+                        <li>${data[208].name}</li>
+                        <li>${data[209].name}</li>
+                        <li>${data[210].name}</li>
+                        <li>${data[211].name}</li>
+                        <li>${data[212].name}</li>
+                        <li>${data[213].name}</li>
+                        <li>${data[214].name}</li>
+                        <li>${data[215].name}</li>
+                        <li>${data[216].name}</li>
+                        <li>${data[217].name}</li>
+                        <li>${data[218].name}</li>
+                        <li>${data[219].name}</li>
+                        <li>${data[220].name}</li>
+                        <li>${data[221].name}</li>
+                        <li>${data[222].name}</li>
+                        <li>${data[223].name}</li>
+                        <li>${data[224].name}</li>
+                        <li>${data[225].name}</li>
+                        <li>${data[226].name}</li>
+                        <li>${data[227].name}</li>
+                        <li>${data[228].name}</li>
+                        <li>${data[229].name}</li>
+                        <li>${data[230].name}</li>
+                        <li>${data[231].name}</li>
+                        <li>${data[232].name}</li>
+                        <li>${data[233].name}</li>
+                        <li>${data[234].name}</li>
+                        <li>${data[235].name}</li>
+                        <li>${data[236].name}</li>
+                        <li>${data[237].name}</li>
+                        <li>${data[238].name}</li>
+                        <li>${data[239].name}</li>
+                        <li>${data[240].name}</li>
+                        <li>${data[241].name}</li>
+                        <li>${data[242].name}</li>
+                        <li>${data[243].name}</li>
+                        <li>${data[244].name}</li>
+                        <li>${data[245].name}</li>
+                        <li>${data[246].name}</li>
+                        <li>${data[247].name}</li>
+                        <li>${data[248].name}</li>
+                        <li>${data[249].name}</li>     
+                </ol>
+            </div>
+
+            `;
+          
+            page.insertAdjacentHTML("afterbegin",pageData);
+        
+           // console.log(`index is ${tab.indexOf(data[2].name)}`)
+            items=data;
+        calcul(data);
+        });
+    function calcul(data){
+        console.log(data[98]);
+           var check =document.querySelectorAll("#list li"), 
+        tab=[], index;
+          console.log(check.length);
+        for(var i =0; i<check.length; i++){
+             tab.push(check[i].innerHTML);
+             
+
+            }
+           for(var i=0; i< check.length;i++){
+               check[i].onclick = function(){
+                    index= tab.indexOf(this.innerHTML);
+                    console.log(this.innerHTML + "index is "+ index);
+                    const htmlData = counterData(data,index);
+                    page.style.display = 'none';
+                    contry.insertAdjacentHTML("afterbegin",htmlData);
+                    
+                
+               };
+             
+           }
+           
+    }
+    function counterData(data,index){
+       const contry= `
+    <div id ="my-card">
+        <div class="Hm_buttons">
+            <i class="fa fa-home" onclick="show()" aria-hidden="true"></i>
+        </div>
+        <div class="buttons">
+            <i class="fa fa-chevron-circle-left" onclick="prev(${index})" aria-hidden="true"></i>
+        </div>
+        <div id = "card">
+            <article class="card">
+                <div class="card-riben">
+                    <div class="card-social br">
+                        <h3>${data[index].area} </h3>
+                        <p>Area</p>
+                    </div>
+                    <div class="card-social br">
+                        <h3>${data[index].region} </h3>
+                        <p>Region</p>
+                    </div>
+                    <div class="card-social">
+                        <h3>${data[index].callingCodes[0]} </h3>
+                        <p>Calling Code</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h4>${data[index].timezones[0]}</h4>
+                    <p class="card-body-text">Time Zone</p>
+                    <img src="${data[index].flags.png}" alt="" class = "card-body-img"/>
+                     <h1 class="class-body-title">
+                        ${data[index].name} 
+                    </h1>
+                    <p class="card-body-text">capital : ${data[index].capital}</p>
+                    <p class="card-body-text">Numeric Code : ${data[index].numericCode}</p>
+                    <span></span>
+                </div>
+                <div class="card-riben">
+                    <div class="card-social br">
+                        <h3>${data[index].languages[0].name} </h3>
+                        <p>Native Language</p>
+                    </div>
+                    <div class="card-social br">
+                        <h3>${data[index].population} </h3>
+                        <p>Population</p>
+                    </div>
+                    <div class="card-social">
+                        <h3>${data[index].demonym} </h3>
+                        <p>Demonym</p>
+                    </div>
+                </div>
+
+            </article>
+                
+        </div>  
+             <div class="buttons">
+            <i class="fa fa-chevron-circle-right" onclick="next(${index})" aria-hidden="true"></i>
+        </div>
+
+        </div>
+
+          
+            `;
+            return contry;
+    }
+    function prev(index){
+        if(index>0){
+            index--;
+            const child = document.getElementById("my-card");
+            child.remove();
+            contry.insertAdjacentHTML("afterbegin",counterData(items,index));
+        }
+    }
+    function next(index){
+        if(index<items.length){
+            index++;
+            const child = document.getElementById("my-card");
+            child.remove();
+            contry.insertAdjacentHTML("afterbegin",counterData(items,index));
+        }
+    }
+    function show(){
+         const child = document.getElementById("my-card");
+            child.remove();
+          page.style.display = "block";
+    }
+            
+    </script>
+</html>

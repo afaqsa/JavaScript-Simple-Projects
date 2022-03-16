@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* float: left; */
+    background-color: rgb(34, 45, 109);
+    place-items: center;
+    justify-items: center;
+    /* place-content: center; */
+
+}
+.contanear{
+    width: 30%;
+   display: flexbox;
+   text-align: center;
+    margin: 20px auto;
+}
+span{
+    color: white;
+    font-size: 20px;
+}
+.counter{
+    color: darkorange;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-size: 56px;
+}
